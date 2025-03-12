@@ -63,7 +63,7 @@ yolo_opt, yolo_unknown = yolo_parser.parse_known_args()
 flask_opt, flask_unknown = flask_parser.parse_known_args()
 
 # Load model (Ensemble is not supported)
-MODEL_PATH = "./KINOKO/yoloresult/okashi23/weights/best.pt"
+MODEL_PATH = "./yolov8n.pt"
 try:
     model = YOLO(MODEL_PATH)
 except Exception as e:
