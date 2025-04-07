@@ -1,4 +1,4 @@
-# Japanese Sweets Image Classifier - Backend API (YOLO-Chimera)
+# Japanese Sweets Image Classifier - Backend API (Kinoko vs Takenoko)
 
 [![GitHub Repo](https://img.shields.io/badge/Backend%20Repo-GitHub-blue?logo=github)](https://github.com/sylfort/yolo-chimera)
 [![Frontend Repo](https://img.shields.io/badge/Frontend%20Repo-GitHub-lightgrey?logo=github)](https://github.com/sylfort/chimera-frontend)
