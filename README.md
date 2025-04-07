@@ -10,7 +10,7 @@ This repository contains the Python/Flask backend API for the Japanese Sweets Im
 
 ## Overview
 
-This backend application forms the core logic of the YOLO-Chimera project. It exposes a RESTful API that allows a client application (like the companion [Vue.js frontend](https://github.com/sylfort/chimera-frontend)) to upload images of Japanese sweets ("Kinoko no Yama" and "Takenoko no Sato").
+This backend application forms the core logic of the Image Classifier project. It exposes a RESTful API that allows a client application (like the companion [Vue.js frontend](https://github.com/sylfort/chimera-frontend)) to upload images of Japanese sweets ("Kinoko no Yama" and "Takenoko no Sato").
 
 The backend then:
 1.  Receives the uploaded image.
