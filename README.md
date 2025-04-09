@@ -208,6 +208,6 @@ These instructions are for running the **backend API server** locally.
 *   Consider asynchronous task processing (e.g., Celery) for predictions if they become slow under load.
 *   Refactor database interaction into a separate service layer for better organization.
 *   Add unit and integration tests for API endpoints and core logic.
-*   **Explore Segmentation/Feature Extraction:** As suggested, investigate adding image segmentation (using YOLOv8-seg) for precise outlines or feature extraction (shape, color, texture from bounding boxes/masks) for deeper analysis.
+*   **Explore Segmentation/Feature Extraction:** Add image segmentation (using YOLOv8-seg) for precise outlines or feature extraction (shape, color, texture from bounding boxes/masks) for deeper analysis.
 
 ---
