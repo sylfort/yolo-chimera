@@ -89,33 +89,6 @@ app.config['RAW_DATA'].mkdir(parents=True, exist_ok=True)
 # DATABASE SETUP WITH FLASK_SQLALCHEMY AND AWS RDS CONFIG
 # --------------------------------------------------------------------
 
-# Set the SQLALCHEMY_DATABASE_URI.
-#DB connection
-#DB_URI = 'postgresql://postgres:chimera1112@database-2.c7ceu88uuynd.us-west-1.rds.amazonaws.com:5432/kinokodb'
-#app.config["SQLALCHEMY_DATABASE_URI"] = DB_URI
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
-
-#from ssm_parameter_store import EC2ParameterStore
-#store = EC2ParameterStore(prefix='/poc')
-# access a parameter under /poc/yolov8DB
-#DB_URI = store['yolov8db']
-#print(DB_URI)
-
-
-
-
-
-
-
-
-
-ssm = boto3.client('ssm', region_name='us-west-1')
-
-
-
-## It's working !!!
-## Getting de DB_URI as a "string" from SSM parameter store
-
 parameter = ssm.get_parameter(Name='/poc/yolov8db', WithDecryption=False)
 
 DB_URI = parameter['Parameter']['Value']
