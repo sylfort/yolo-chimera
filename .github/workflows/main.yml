@@ -1,0 +1,34 @@
+# Esse é um workflow básico para ajudar você a começar a usar o Actions
+name: Connect to an AWS role from a GitHub repository
+
+# Controla quando a ação será executada. Invoca o workflow em eventos push, mas somente para o branch principal
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  
+  AWS_REGION : us-west-1 #Altere para refletir sua região
+
+# A permissão pode ser adicionada no nível do job ou do workflow  
+permissions:
+      id-token: write   # Isso é necessário para solicitar o JWT
+      contents: read    # Isso é necessário para ações/checkout
+jobs:
+  AssumeRoleAndCallIdentity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v3
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          role-to-assume: arn:aws:iam::076510357641:role/GitHubAction-AssumeRoleWithAction #altere para refletir a ARN da sua IAM role
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ env.AWS_REGION }}
+      # Olá da AWS: WhoAmI
+      - name: Sts GetCallerIdentity
+        run: |
+          aws sts get-caller-identity
