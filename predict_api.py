@@ -116,7 +116,7 @@ p = str( {p['Value'] for p in dictParameters['Parameters']} )[1:-1].replace("'",
 #print(type(p))
 #print(p)
 
-DB_URI = 'postgresql://' + p[0] + ':' + p[1] + '@' + p[2] + ':' + p[3] + '/' + p[4]
+DB_URI = 'postgresql://' + p[1] + ':' + p[0] + '@' + p[2] + ':' + p[3] + '/' + p[4]
 #print(DB_URI)
 
 # Initialize SQLAlchemy instance
