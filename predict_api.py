@@ -109,34 +109,15 @@ app.config['RAW_DATA'].mkdir(parents=True, exist_ok=True)
 import boto3
 
 ssm = boto3.client('ssm', region_name='us-west-1')
+dictParameters = ssm.get_parameters(Names=['/poc/image-recogn-dev-postgres'], WithDecryption=True)
 
-
-
-## It's working !!!
-## Getting de DB_URI as a "string" from SSM parameter store
-
-parameter = ssm.get_parameter(Name='/poc/yolov8db', WithDecryption=False)
-
-DB_URI = parameter['Parameter']['Value']
-print(DB_URI)
-
-
-
-## It's working and I think it's better
-## Getting a stringList from SSM parameter store
-
-dictParameters = ssm.get_parameters(Names=['/poc/predict'], WithDecryption=False)
 #print(dictParameters)
-
 p = str( {p['Value'] for p in dictParameters['Parameters']} )[1:-1].replace("'", "").split(",")
 #print(type(p))
 #print(p)
 
-DB_URI = 'postgresql://' + p[0] + ':' + p[1] + '@database-2.' + p[2] + '.us-west-1.rds.amazonaws.com:5432/'+ p[3]
-print(DB_URI)
-
-
-
+DB_URI = 'postgresql://' + p[0] + ':' + p[1] + '@' + p[2] + ':' + p[3] + '/' + p[4]
+#print(DB_URI)
 
 # Initialize SQLAlchemy instance
 app.config["SQLALCHEMY_DATABASE_URI"] = DB_URI
