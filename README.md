@@ -6,7 +6,7 @@
 
 This repository contains the Python/Flask backend API for the Japanese Sweets Image Classifier project. It handles image uploads, performs machine learning inference using YOLOv8, interacts with a PostgreSQL database, and serves results to the [Vue.js frontend application](https://github.com/sylfort/chimera-frontend).
 
-[View the Live Demo](http://ec2-54-215-114-190.us-west-1.compute.amazonaws.com) | [Visit the Frontend Repository](https://github.com/sylfort/chimera-frontend)
+[View the Live Demo](http://54.153.65.56/) | [Visit the Frontend Repository](https://github.com/sylfort/chimera-frontend)
 
 ## Overview
 
