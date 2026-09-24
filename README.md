@@ -2,7 +2,7 @@
 
 [![GitHub Repo](https://img.shields.io/badge/Backend%20Repo-GitHub-lightgrey?logo=github)](https://github.com/sylfort/yolo-chimera)
 [![Frontend Repo](https://img.shields.io/badge/Frontend%20Repo-GitHub-blue?logo=github)](https://github.com/sylfort/chimera-frontend)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](http://ec2-54-215-114-190.us-west-1.compute.amazonaws.com)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](http://54.153.65.56/)
 
 This repository contains the Python/Flask backend API for the Japanese Sweets Image Classifier project. It handles image uploads, performs machine learning inference using YOLOv8, interacts with a PostgreSQL database, and serves results to the [Vue.js frontend application](https://github.com/sylfort/chimera-frontend).
 
