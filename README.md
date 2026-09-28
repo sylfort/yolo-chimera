@@ -2,16 +2,16 @@
 
 [![GitHub Repo](https://img.shields.io/badge/Backend%20Repo-GitHub-lightgrey?logo=github)](https://github.com/sylfort/yolo-chimera)
 [![Frontend Repo](https://img.shields.io/badge/Frontend%20Repo-GitHub-blue?logo=github)](https://github.com/sylfort/chimera-frontend)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](http://54.153.65.56/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](http://yolo-1403983084.ap-northeast-1.elb.amazonaws.com/)
 
 This repository contains the Python/Flask backend API for the Japanese Sweets Image Classifier project. It handles image uploads, performs machine learning inference using YOLOv8, interacts with a PostgreSQL database, and serves results to the [Vue.js frontend application](https://github.com/sylfort/chimera-frontend).
 
-[View the Live Demo](http://54.153.65.56/) | [Visit the Frontend Repository](https://github.com/sylfort/chimera-frontend)
+[View the Live Demo](http://yolo-1403983084.ap-northeast-1.elb.amazonaws.com/) | [Visit the Frontend Repository](https://github.com/sylfort/chimera-frontend)
 
 ## Overview
 
 <p align="center">  <!-- Optional: align="center" or align="left" -->
-  <img src="https://github.com/user-attachments/assets/2c001062-8bcd-41eb-b193-b557c92ce604" alt="Kansai Ben Quest image" width="650">
+  <img src="https://github.com/user-attachments/assets/2c001062-8bcd-41eb-b193-b557c92ce604" alt="Kinoko vs Takenoko frontpage" width="650">
 </p>
 
 This backend application forms the core logic of the Image Classifier project. It exposes a RESTful API that allows a client application (like the companion [Vue.js frontend](https://github.com/sylfort/chimera-frontend)) to upload images of Japanese sweets ("Kinoko no Yama" and "Takenoko no Sato").
